@@ -6,7 +6,7 @@ class Destination
 {
     private:
         std::string villeDepart;
-        std::string VilleArrivee;
+        std::string villeArrivee;
 
     public:
         //constructeur et descructeur

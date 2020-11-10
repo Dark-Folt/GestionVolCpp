@@ -9,27 +9,27 @@ class Passager
         std::string nom;
         std::string prenom;
         std::string numPassport;
-        unsigned int age;
+        unsigned short int age;
         Titre titre; //type enumeration
 
     public:
         //constructeurs et  //destructeur
         Passager();
-        Passager(std::string, std::string, std::string, unsigned int, Titre);
+        Passager(std::string, std::string, std::string, unsigned short int, Titre);
         ~Passager();
 
         //getters
         std::string getNom();
         std::string getPrenom();
         std::string getNumPassport();
-        unsigned int getAge();
+        unsigned short int getAge();
         Titre getTitre();
 
         //setters
         void setNom(std::string);
         void setPrenom(std::string);
         void setNumPassport(std::string);
-        void setAge(unsigned int);
+        void setAge(unsigned short int);
         void setTitre(Titre);
 
 };

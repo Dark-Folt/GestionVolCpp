@@ -10,7 +10,7 @@ class Vol
 {
     private:
         std::string     numVol;
-        unsigned int    nbPlaceMax;
+        long            nbPlaceMax;
         float           prix;
         Destination     *destination;
         DateT           *date;
@@ -19,19 +19,19 @@ class Vol
     public:
         //constructeur et destructeur
         Vol();
-        Vol(std::string, unsigned int, float, Destination *, DateT *);
+        Vol(std::string, long, float, Destination *, DateT *);
         ~Vol();
 
         //getters
         std::string     getNumVol();
-        unsigned int    getNbPlaceMax();
+        long            getNbPlaceMax();
         float           getPrix();
-        Destination     getDestination();
+        Destination *   getDestination();
         DateT *         getDate();
 
         //setters
         void            setNumVol(std::string);
-        void            setNbPlaceMax(unsigned int);
+        void            setNbPlaceMax(long);
         void            setPrix(float);
         void            setDestination(Destination *);
         void            setDate(DateT *);
