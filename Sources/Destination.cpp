@@ -2,6 +2,11 @@
 #include <iostream>
 #include "../Headers/Destination.hpp"
 
+using std::cout;
+using std::endl;
+using std::setw;
+using std::string;
+using std::ostringstream;
 
 Destination::Destination()
 {
@@ -38,3 +43,11 @@ void Destination::setVilleArrivee(std::string villeArrivee)
 {
     this->villeArrivee = villeArrivee;
 }
+
+string Destination::to_string()
+{
+    ostringstream r;
+    r << "Depart: " << this->villeDepart <<"  --------------->  "<<"Arrivee: "<<this->villeArrivee << endl;
+    return r.str();
+}
+

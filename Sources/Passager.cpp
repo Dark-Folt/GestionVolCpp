@@ -1,15 +1,22 @@
 #include <iostream>
-
+#include <iomanip>
+#include <sstream>
 #include "../Headers/Passager.hpp"
+
+using std::cout;
+using std::endl;
+using std::setw;
+using std::string;
+using std::ostringstream;
 
 
 Passager::Passager()
 {
-    std::cout << "Vous ne pouver pas creer un passage vide" << std::endl;
+    cout << "Vous ne pouver pas creer un passage vide" << endl;
     exit(-1);
 }
 
-Passager::Passager(std::string nom, std::string prenom, std::string numPassport, unsigned short int age, Titre titre)
+Passager::Passager(string nom, string prenom, string numPassport, unsigned short int age, Titre titre)
 :nom(nom), prenom(prenom), numPassport(numPassport), age(age), titre(titre)
 { }
 
@@ -17,17 +24,17 @@ Passager::~Passager()
 { } 
 
 //getters
-std::string Passager::getNom()
+string Passager::getNom()
 {
     return this->nom;
 }
 
-std::string Passager::getPrenom()
+string Passager::getPrenom()
 {
     return this->prenom;
 }
 
-std::string Passager::getNumPassport()
+string Passager::getNumPassport()
 {
     return this->numPassport;
 }
@@ -43,17 +50,17 @@ Titre Passager::getTitre()
 }
 
 //setters
-void Passager::setNom(std::string nom)
+void Passager::setNom(string nom)
 {
     this->nom = nom;
 }
 
-void Passager::setPrenom(std::string prenom)
+void Passager::setPrenom(string prenom)
 {
     this->prenom = prenom;
 }
 
-void Passager::setNumPassport(std::string numPassport)
+void Passager::setNumPassport(string numPassport)
 {
     this->numPassport = numPassport;
 }
@@ -67,3 +74,19 @@ void Passager::setTitre(Titre titre)
 {
     this->titre = titre;
 }
+
+
+//services
+
+string Passager::to_string()
+{
+    ostringstream r;
+    r << "Nom: " << this->nom << setw(40) << "Age: " << this->age << endl; 
+    r << "Prenom: " << this->prenom << endl; 
+    r << "Numero Passeport: " << this->numPassport << endl; 
+    return r.str();
+}
+
+
+
+

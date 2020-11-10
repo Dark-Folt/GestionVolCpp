@@ -1,6 +1,10 @@
 #include <iostream>
 #include "../Headers/DateT.hpp"
 
+using std::cout;
+using std::endl;
+using std::setw;
+using std::ostringstream;
 
 DateT::DateT()
 {
@@ -69,4 +73,26 @@ void DateT::setHeures(unsigned long heures)
 void DateT::setMinutes(unsigned long minutes)
 {
     this->minutes = minutes;
+}
+
+string DateT::getDate()
+{
+    ostringstream r;
+    r << this->jour <<"/"<<this->moi<<"/"<< this->annee << endl; 
+    return r.str();
+}
+
+string DateT::getHeure()
+{
+    ostringstream r;
+    r << this->heures <<":"<<this->minutes<< endl; 
+    return r.str();
+}
+
+string DateT::to_string()
+{
+    ostringstream r;
+    r << "Date:  " << this->jour << "/" << this->moi << "/" << this->annee << endl;
+    r << "Heure: " << this->heures << ":" << this->minutes << endl;
+    return r.str();
 }

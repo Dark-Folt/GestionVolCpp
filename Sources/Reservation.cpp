@@ -1,5 +1,12 @@
 #include <iostream>
+#include <iomanip>
 #include "../Headers/Reservation.hpp"
+
+using std::cout;
+using std::endl;
+using std::setw;
+using std::string;
+using std::ostringstream;
 
 Reservation::Reservation()
 {
@@ -57,3 +64,16 @@ bool Reservation::isConfirme()
 {
     return this->confirme;
 }
+
+string Reservation::to_string()
+{
+    ostringstream r;
+    r << "Numero:   " << this->numReservation << endl;
+    r << "Passport: " << this->numPassport << endl;
+    r << "Numero de vol: " << this->numVol << endl;
+    r << "Etat confirmee ? " << this->confirme << endl;
+
+    return r.str();
+}
+
+
