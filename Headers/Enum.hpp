@@ -1,4 +1,4 @@
 
 
 //declaration du type titre 
-enum Titre {M,Mlle,Mme};
+enum Titre {M, Mlle, Mme};

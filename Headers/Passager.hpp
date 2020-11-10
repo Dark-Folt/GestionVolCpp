@@ -32,5 +32,8 @@ class Passager
         void setAge(unsigned short int);
         void setTitre(Titre);
 
+        //services
+        std::string to_string();
+
 };
 #endif

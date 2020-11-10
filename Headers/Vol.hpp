@@ -30,10 +30,14 @@ class Vol
         DateT *         getDate();
 
         //setters
-        void            setNumVol(std::string);
-        void            setNbPlaceMax(long);
-        void            setPrix(float);
-        void            setDestination(Destination *);
-        void            setDate(DateT *);
+        void   setNumVol(std::string);
+        void   setNbPlaceMax(long);
+        void   setPrix(float);
+        void   setDestination(Destination *);
+        void   setDate(DateT *);
+
+
+        //services
+        string  to_string();
 };
 #endif

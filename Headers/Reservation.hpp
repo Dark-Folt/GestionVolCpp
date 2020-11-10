@@ -2,32 +2,34 @@
 #define __RES_H_
 
 #include <string>
+using std::string;
 
 class Reservation
 {
     private:
-        std::string     numReservation;
-        std::string     numPassport;
-        std::string     numVol;
-        bool            confirme;
+        string numReservation;
+        string numPassport;
+        string numVol;
+        bool   confirme;
 
     public:
         //constructeur et destructeur
         Reservation();
-        Reservation(std::string, std::string, std::string, bool);
+        Reservation(string, string, string, bool);
         ~Reservation();
 
         //getters
-        std::string     getNumReservation();
-        std::string     getNumPassport();
-        std::string     getNumVol();
+        string  getNumReservation();
+        string  getNumPassport();
+        string  getNumVol();
 
         //setters
-        void            setNumReservation(std::string);
-        void            setNumPassport(std::string);
-        void            setNumVol(std::string);
+        void    setNumReservation(string);
+        void    setNumPassport(string);
+        void    setNumVol(string);
     
         //services
-        bool            isConfirme();
+        bool    isConfirme();
+        string  to_string(); 
 };
 #endif

@@ -2,24 +2,28 @@
 #define __DEST_H_
 #include <string>
 
+using std::string;
 class Destination
 {
     private:
-        std::string villeDepart;
-        std::string villeArrivee;
+        string villeDepart;
+        string villeArrivee;
 
     public:
         //constructeur et descructeur
         Destination();
-        Destination(std::string, std::string);
+        Destination(string, string);
         ~Destination();
 
         //getters
-        std::string  getVilleDepart();
-        std::string  getVilleArrivee();
+        string  getVilleDepart();
+        string  getVilleArrivee();
 
         //setters
-        void        setVilleDepart(std::string);
-        void        setVilleArrivee(std::string);
+        void    setVilleDepart(string);
+        void    setVilleArrivee(string);
+
+        //services
+        string  to_string();
 };
 #endif
