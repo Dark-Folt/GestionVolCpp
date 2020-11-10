@@ -1,6 +1,7 @@
 #ifndef __DATE_H_
 #define __DATE_H_
 
+using std::string;
 class DateT
 {
     private:
@@ -29,6 +30,12 @@ class DateT
         void setAnnee(unsigned int);
         void setHeures(unsigned long);
         void setMinutes(unsigned long);
+
+
+        //services
+        string getDate();
+        string getHeure();
+        string to_string();
 
 };
 #endif
